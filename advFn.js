@@ -110,13 +110,13 @@ function onClick(e) {
     e.target.parentElement.parentElement.children[0].textContent = e.target.textContent
   }  
   if(e.target.textContent.includes('Spotify')){
-    window.location.href = '/Developing_Landing_Page/pages/SpotifyMusic.html'
+    window.location.href = '/pages/SpotifyMusic.html'
   }
   if(e.target.textContent.includes('Apple')){
-    window.location.href = '/Developing_Landing_Page/pages/AppleMusic.html'
+    window.location.href = '/pages/AppleMusic.html'
   }
   if(e.target.textContent.includes('Distribution')){
-    window.location.href = '/Developing_Landing_Page/pages/HomeDistribution.html'
+    window.location.href = '/pages/HomeDistribution.html'
   }
 }
 
@@ -132,13 +132,13 @@ if(document.getElementsByClassName('music')){
 if(document.getElementById('musicNav')){
 document.getElementById('musicNav').addEventListener('click',(e)=>{
   if(e.target.textContent.includes('Spotify')){
-    window.location.href = '/Developing_Landing_Page/pages/SpotifyMusic.html'
+    window.location.href = '/pages/SpotifyMusic.html'
   }
   if(e.target.textContent.includes('Apple')){
-    window.location.href = '/Developing_Landing_Page/pages/AppleMusic.html'
+    window.location.href = '/pages/AppleMusic.html'
   }
   if(e.target.textContent.includes('Distribution')){
-    window.location.href = '/Developing_Landing_Page/pages/HomeDistribution.html'
+    window.location.href = '/pages/HomeDistribution.html'
   }
 })}
 
