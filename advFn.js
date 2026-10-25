@@ -162,3 +162,41 @@ document.querySelector('#spotifyFAQS').addEventListener('click', (e)=>{
   }
 
 })}
+
+let buttonQuery = window.matchMedia("(max-width: 475px)")
+
+if(buttonQuery.matches){
+  document.querySelectorAll('.navHeadButton').forEach(item => item.textContent = 'Login')
+}
+
+document.querySelector('#mobNav').classList.add('removeNavMob')
+
+document.querySelector('#navSym').addEventListener('click', () => {
+  document.querySelector('#mobNav').classList.remove('removeNavMob')
+  document.querySelector('#mobNav').classList.add('addNavMob')
+})
+
+document.querySelector('#mobNav img').addEventListener('click', (e) => {
+  document.querySelector('#mobNav').classList.remove('addNavMob')
+  document.querySelector('#mobNav').classList.add('removeNavMob')
+})
+
+let menu = document.querySelector('#addMenu');
+let menuBlock = document.querySelectorAll('.block1 p')
+
+console.log(menuBlock[1].classList)
+
+menu.addEventListener('click', ()=>{
+  if(menuBlock[1].parentElement.className.includes('hide'))
+    menuBlock[1].parentElement.classList.remove('hide')
+  else
+    menuBlock[1].parentElement.classList.add('hide')
+  
+  menuBlock.forEach(item => {  
+    if(item.className.includes('addMobNavMenu')){
+      item.classList.remove('addMobNavMenu')
+    }
+    else
+      item.classList.add('addMobNavMenu')
+  })
+})

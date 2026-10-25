@@ -23,6 +23,10 @@ li {
     list-style: none; 
 }
 
+#navSym, #mobNav{
+    display: none;
+}
+
 .headerNav, .headerNavContent {
     height: 80px;
     margin: 0;
@@ -117,6 +121,7 @@ li {
     font-size: calc(62.71968px + 1.07817vw);
     margin-bottom: 20px;
     margin-left: 4.5em;
+    margin-top: 0.5em;
     bottom: 4.3em;
     line-height: 0.8em;
     font-weight: bolder;
@@ -772,6 +777,41 @@ footer li:first-child {
     transition: transform 3s ease-in-out, opacity 3s ease-in-out, height 1.3s ease-in-out;
 }
 
+    .asideDetails{
+
+        h3{
+          margin-top: 0.2em;
+          width: 90%;
+          font-size: 1.8em;
+          line-height: 45px;
+          text-align: center;
+        }
+
+        p{
+          font-size: 0.9em;
+          line-height: 24px;
+          width: 90%
+        }
+    }
+
+    .asideSectionDetails{
+        padding-top: 5em;
+
+        h3{
+          font-size: 2rem; 
+          /* transform: translateX("center") */
+        }
+        p{
+          width: 60%;
+          margin-left: 14.4em
+        }
+    }
+
+    spotifyButton{
+        margin-top: 0.6em
+    }
+
+
 .AppleHeading {
     background-image: url('/images/BG_pedalboard_gold-1.webp');
 }
@@ -788,7 +828,8 @@ footer li:first-child {
 }
 
 #applePart1 p{
-    margin-left: 0;
+    margin-left: -4em;
+    width: 40%
 }
 
 #applePart1 dl {
@@ -949,4 +990,483 @@ strong {
 .AppleFAQS li{
     padding-bottom: 0;
     margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 475px){
+    
+    nav{
+        
+        justify-content: space-around;
+        
+        .headerNavContent li{
+            display: none;
+        }
+
+        
+
+        .headerNavContent button{
+            margin-left: 80%;
+        }
+
+        .headerNav{
+
+            .headerNavImage{
+                margin-left: -3em;
+            }
+
+            #navSym{
+                display: block;
+                height: 45%;
+                margin-left: -3em;
+            }
+        }
+
+        #mobNav{
+            position: absolute;
+            top: 0;
+            background-color: #1f1f30;
+            color: #40bcd0;
+            display: block;
+            width: 15em;
+            height: 100vh;
+            padding: 4% 0;
+
+            li{
+                padding: 4% 0;
+                margin: 12% 15%;
+                font-size: 1.2rem;
+            }
+
+            li:nth-child(2){
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                align-items: center;
+                margin-left: 0;
+                margin-bottom: 0;                
+            }
+
+            .block1{
+                padding:  0;
+                font-size: 100%;                
+            }
+
+            .hide{
+                display: none;
+            }
+
+            .addMobNavMenu{
+                margin: 0.4% 0;
+                padding: 4% 10%;
+                background-color: #10101a;
+            }
+
+            .remMobNavMenu{
+                background-color: #1f1f30;
+                padding: 0;
+                margin: 0;
+                font-size: 0;
+            }
+            
+            .mobButSym{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                button{
+                    width: 80%;
+                }
+
+                margin: 15% 2%;
+            }
+
+            a{
+                text-decoration: none;
+                color: #40bcd0;
+            }
+
+            transition-property: transform;
+            transition-duration: 2s;
+            transition-timing-function: ease;            
+        }
+
+        .addNavMob{
+            transform: translateX(0%);
+        }
+        .removeNavMob{
+            transform: translateX(-100%);
+        }    
+
+    }
+
+    .title{
+        background-image: url(images/home_poster-768x374.jpg);
+        
+        video{
+            visibility: hidden;
+        }
+
+        .titleHeading{
+            margin: 0;
+            width: 80%;
+            font-size: 2rem;
+            z-index: 2;
+            bottom: 70%;
+            left: 10%;
+            
+            br{
+                display: none;
+            }
+        }
+
+        button{
+            margin: 0;
+            bottom: 60%;
+            left: 10%;
+            font-size: 1.2rem;
+        }
+
+        p{
+            width: 70%;
+            margin-left: 0;
+            font-size: 1rem;
+            bottom: 65%;
+            left: 10%;
+        }
+    }
+    
+    .MusicData{
+        padding: 5% 0;
+
+        h1{
+            width: 80%; 
+            margin: 2% 10%;
+            font-size: 1.3rem;
+        }
+
+        p{
+            width: 80%; 
+            margin: 2% 5%;
+            padding: 4%;
+            font-size: 1.3rem;
+        }
+
+        .MusicImg{
+            width: 100%;
+            margin: 0;
+            align-self: center;
+            display: flex;
+            flex-wrap: wrap;
+
+            img{
+                width: 25%;
+            }
+        }
+
+        .MusicImg img:nth-of-type(odd){
+            margin-left: 20%;
+        }
+
+        button{
+            width: 50%;
+            margin: 4% 25%;
+            padding: 3%;
+            font-size: 0.8rem;
+        }
+
+        .MusicDataFooter{
+            padding: 4% 0;
+            margin: 0 10%;
+            font-weight: 800;
+        }
+    }
+
+    #benefits{
+        
+        .benefits{
+            display: block;
+
+            .perksBenefits{
+                flex-direction: column;
+            }
+
+            .benefitsCDImg{
+                margin-left: 15%;
+                margin-bottom: 12%;                
+            }
+
+            .benefitsPerks{
+                margin: 4% 4%;
+                width: 90%;
+
+                img{
+                    width: 40%;
+                    height: 30%;
+                    margin-bottom: 6%;
+                }
+
+            }
+
+            .graph img{
+                margin-bottom: 12%;
+            }
+
+            button{
+                width: 50%;
+                margin: 4% 25%;
+                padding: 3%;
+                font-size: 1rem;
+            }
+        }
+
+        .ArtistReviews{
+            display: flex;
+            padding: 4% 0;
+            align-items: center;
+
+            h2{
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 6%;
+            }
+
+            .ArtistsThoughts{
+                width: 90%;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 ;
+
+                .Artists{
+                    width: 100%; 
+                    
+                    .detailsArtist{
+                        margin-bottom: 4%;
+                    }
+                }
+            }
+        }
+
+        .MusicPromotion{
+            display: block;
+
+            h2{
+                font-size: 2.5rem;
+                padding: 6% 0;
+                text-align: center;
+                padding-top: 2em;
+            }
+
+            .PromotionResources{
+                flex-direction: column;
+                align-items: center;
+
+                .diym{
+                    width: 80%;
+
+                    img{
+                        width: 80%;
+                    }
+                }
+
+                .Blog{
+                    margin: 2.5em auto;
+                }
+            }
+        }
+
+    }    
+
+    .footerNavigation{
+
+            .footerNavbar{
+                padding: 0 4%;
+
+                li{
+                    margin: 0 auto;
+                }
+            }
+        }
+
+
+
+    footer{
+        display: block;
+        height: auto;
+        padding: 6% 0;
+        padding-left: 4%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+
+        svg{
+            width: 40%;
+            position: absolute;
+            top: 8%;
+            left: 27%;
+        }
+
+        nav{
+            margin: 4% 4%;
+            width: 40%;
+        }
+
+        li:first-child{
+            margin-top: 3%;
+        }
+
+        nav:nth-child(2), nav:nth-child(3){
+            margin-top: 55%;
+        }
+    }
+    
+    
+    #diyOffers{
+        display: block;
+        padding: 0;
+
+        #specialOffers{
+            font-size: 1.3rem;
+            margin: 8% 0 4% 4%;
+            width: 90%;
+        }
+
+        #inputDIY{
+            margin: 5% 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input{
+                width: 40%;
+                margin: 3% 0;
+                padding: 2% 6%;
+            }
+        }
+    }
+
+    .distriPageTitle{
+        padding: 0;
+        h1{
+            font-size: 2.2rem;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    .detailedSection{
+
+        .asideNav {
+            display: none;
+        }
+
+        .asideDetails{
+            width: 90%;
+
+            p{
+                text-align: center;
+            }
+        }
+    }
+
+    .spotifyButton{
+      margin: 5% 0 5% 18%;
+    }
+
+    .asideSectionDetails{
+        padding-top: 0;
+        padding-left: 0;
+
+        h3,h2{
+          margin-right: 0;
+        }
+
+        h3, h2, p{
+          margin: 4% auto;
+          width: 90%;
+          transform: translateX(0);
+        }
+
+        h3{
+          font-size: 2rem;
+        }
+
+    }
+
+    .asideSectionDetails{
+      padding: 20% 0;
+    }
+
+    
+    #spotifyFAQS{
+        padding-top: 8%;
+        padding-right: 0;
+        
+        h1{
+            width: 90%;
+            margin: 5% auto;
+            padding: 0;
+            transform: translateX(0);
+        }
+
+        ul{
+            flex-direction: column;
+            width: 70%;
+            margin: 0 auto;
+            padding: 0;
+
+            li{
+                margin: 5% 0;
+                padding-right: 0;
+                width: 100%;
+
+                h3{
+                    width: 100%;
+                    padding-right: 0;
+                    font-size: 1.5rem;
+                    margin-bottom: 5%;
+                }
+
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .appleSection1{
+        margin-left: 0;
+        display: block;
+
+        #applePart1, #applePart{
+
+            p, dl{
+                margin: 10% auto;
+                padding: 4% 0;
+                width: 80%;
+            }
+        }
+    }
+
+    .section2{
+        ul {
+            /* border: 2px solid red; */
+            margin: 0 auto;
+            width: 90%;
+            justify-content: space-between;
+
+            li{
+                /* border: 2px solid green; */
+                padding: 4% 0;
+                margin: 2% 0;
+                font-size: 80%;
+            }
+        }
+    }
+    
+
+    .section3{
+        height: auto;
+    }
 }
